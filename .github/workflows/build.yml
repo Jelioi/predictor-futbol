@@ -11,9 +11,7 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt update
-          sudo apt install -y openjdk-17-jdk autoconf libtool \
-            pkg-config zlib1g-dev libncurses5-dev cmake \
-            libffi-dev libssl-dev
+          sudo apt install -y openjdk-17-jdk autoconf libtool pkg-config zlib1g-dev libncurses5-dev cmake libffi-dev libssl-dev
           pip install buildozer cython
       - name: Build APK
         run: yes | buildozer android debug
